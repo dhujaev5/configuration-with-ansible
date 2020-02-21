@@ -2,7 +2,7 @@
 - name: Test Playbook
   hosts: all
   become: true
-  became_method: sudo
+  become_method: sudo
   connection: ssh
   ignore_errors: false
   tasks:
