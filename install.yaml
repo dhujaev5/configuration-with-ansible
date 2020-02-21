@@ -10,5 +10,9 @@
       ping:
     - name: Install telnet
       package: 
-        name: telnet
-        state: latest
+        name: 
+          - telnet
+          - elinks
+          - wget
+          - unzip
+        state: present
