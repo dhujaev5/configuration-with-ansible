@@ -6,7 +6,7 @@
   connection: ssh
   ignore_errors: false
   tasks:
-    name: create a repo
+    - name: create a repo
       copy:
         src: r1soft.repo
         dest: /etc/yum.repos.d/r1soft.repo
