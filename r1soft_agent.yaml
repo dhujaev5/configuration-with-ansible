@@ -6,9 +6,10 @@
   connection: ssh
   ignore_errors: false
   tasks:
-    - name: Creates a repo
-      copy: r1soft.repo
-      dest: /etc/yum.repos.d/r1soft.repo
+    name: create a repo
+      copy:
+        src: r1soft.repo
+        dest: /etc/yum.repos.d/r1soft.repo
 
     - name: Install R1soft
       package:
@@ -24,7 +25,7 @@
         
     - name: Get Key
       shell: r1soft-setup --get-key http://backup.myawstestclass.com
-      
+
     - name: Start R1soft Agent
       systemd:
         name: sbm-agent
